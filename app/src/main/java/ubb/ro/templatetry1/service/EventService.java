@@ -1,4 +1,4 @@
-package ubb.ro.templatetry1;
+package ubb.ro.templatetry1.service;
 
 import java.util.List;
 
@@ -15,8 +15,13 @@ import ubb.ro.templatetry1.model.Post;
  */
 
 public interface EventService {
+
     @GET("event")
     Observable<List<Event>> getEvents(@Header("If-Modified-Since") String ifModifiedSince);
+
+
+    @GET("event")
+    Observable<List<Event>> getEvents();
 
     @POST("event")
     Observable<Event> createEvent(@Body Event event);

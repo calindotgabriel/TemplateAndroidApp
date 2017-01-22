@@ -2,13 +2,11 @@ package ubb.ro.templatetry1;
 
 import android.app.Application;
 
-import ubb.ro.templatetry1.data.component.DaggerMainScreenComponent;
 import ubb.ro.templatetry1.data.component.DaggerNetComponent;
 import ubb.ro.templatetry1.data.component.MainScreenComponent;
 import ubb.ro.templatetry1.data.component.NetComponent;
 import ubb.ro.templatetry1.data.module.AppModule;
-import ubb.ro.templatetry1.data.module.MainScreenModule;
-import ubb.ro.templatetry1.data.module.NetModule;
+import ubb.ro.templatetry1.data.module.ApiModule;
 
 /**
  * Created by calin on 13.01.2017.
@@ -23,7 +21,7 @@ public class TemplateApp extends Application {
         super.onCreate();
         mNetComponent = DaggerNetComponent.builder()
                 .appModule(new AppModule(this))
-                .netModule(new NetModule("http://192.168.0.129:3000"))
+                .apiModule(new ApiModule("http://192.168.0.129:3000"))
                 .build();
     }
 

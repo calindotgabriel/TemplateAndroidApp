@@ -22,10 +22,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by calin on 13.01.2017.
  */
 @Module
-public class NetModule {
+public class ApiModule {
     String mBaseUrl;
 
-    public NetModule(String mBaseUrl) {
+    public ApiModule(String mBaseUrl) {
         this.mBaseUrl = mBaseUrl;
     }
 
